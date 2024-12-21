@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Página Tatoo - Eternidade!</title>
+  <title>Página Tatoo - Eternidade</title>
 
   <!-- Importando a fonte Dancing Script pelo Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,12 +25,54 @@
       background-color: #0B0F2F; /* Fundo sólido azul escuro */
       font-family: 'Dancing Script', cursive; /* Fonte personalizada */
       height: 100vh; /* Altura total da tela */
+      overflow: hidden; /* Evita rolagem por causa da animação */
       display: flex;
       justify-content: flex-start; /* Alinha o conteúdo ao topo */
       align-items: center;
       flex-direction: column; /* Empilha elementos verticalmente */
-      padding-top: 5%; /* Define o espaçamento do topo */
+      padding-top: 5%; /* Espaçamento superior */
     }
+
+    /* Estilo para estrelas cintilantes */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .stars span {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.8); /* Cor branca semi-transparente */
+      border-radius: 50%; /* Deixa as estrelas redondas */
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); /* Efeito de brilho */
+      animation: twinkle 3s infinite ease-in-out; /* Animação de cintilação */
+    }
+
+    /* Animação para cintilar */
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+
+    /* Gerando estrelas aleatoriamente */
+    .stars span:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .stars span:nth-child(2) { top: 20%; left: 50%; animation-delay: 1s; }
+    .stars span:nth-child(3) { top: 30%; left: 30%; animation-delay: 2s; }
+    .stars span:nth-child(4) { top: 40%; left: 80%; animation-delay: 1.5s; }
+    .stars span:nth-child(5) { top: 50%; left: 10%; animation-delay: 0.5s; }
+    .stars span:nth-child(6) { top: 60%; left: 60%; animation-delay: 0.8s; }
+    .stars span:nth-child(7) { top: 70%; left: 40%; animation-delay: 2.5s; }
+    .stars span:nth-child(8) { top: 80%; left: 70%; animation-delay: 0.3s; }
 
     /* Estilização do contêiner da frase */
     .container-frase {
@@ -41,6 +83,8 @@
       text-align: center;
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra ao redor */
       max-width: 90%; /* Ajusta a largura para telas pequenas */
+      position: relative; /* Mantém o texto acima das estrelas */
+      z-index: 10; /* Garante que a frase fique acima das estrelas */
     }
 
     /* Estilização da frase principal */
@@ -66,8 +110,22 @@
   </style>
 </head>
 <body>
+  <!-- Fundo de estrelas cintilantes -->
+  <div class="stars">
+    <!-- Criando estrelas com elementos span -->
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Texto principal -->
   <div class="container-frase">
-    <h1>O que fazemos agora ecoa na eternidade!</h1>
+    <h1>O que fazemos agora ecoa na eternidade</h1>
   </div>
 </body>
 </html>
