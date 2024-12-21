@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Página Tatoo - Eternidade!</title>
+  <title>Página Tatoo - Eternidade</title>
 
   <!-- Importando a fonte Dancing Script pelo Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px; /* Espaçamento para evitar cortes em telas pequenas */
     }
 
     /* Estilização do contêiner da frase */
@@ -35,23 +36,31 @@
       background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
       border: 2px solid rgba(255, 255, 255, 0.5); /* Borda clara */
       border-radius: 12px; /* Cantos arredondados */
-      padding: 30px 40px; /* Espaçamento interno */
+      padding: 20px 30px; /* Espaçamento interno ajustado */
       text-align: center;
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra ao redor */
-      max-width: 80%;
+      max-width: 100%; /* Ajusta para caber na tela de smartphones */
     }
 
     /* Estilização da frase principal */
     .container-frase h1 {
       color: #FFFFFF; /* Cor branca para contraste */
-      font-size: 56px; /* Tamanho da fonte */
+      font-size: 64px; /* Tamanho maior da fonte */
+      line-height: 1.3; /* Espaçamento entre linhas */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
     }
 
-    /* Responsividade para telas menores */
+    /* Responsividade para smartphones */
+    @media (max-width: 768px) {
+      .container-frase h1 {
+        font-size: 48px; /* Reduz fonte para caber em telas menores */
+      }
+    }
+
     @media (max-width: 480px) {
       .container-frase h1 {
-        font-size: 36px; /* Reduz tamanho da fonte em telas pequenas */
+        font-size: 36px; /* Fonte ainda menor para smartphones pequenos */
+        padding: 10px; /* Reduz o padding interno */
       }
     }
   </style>
