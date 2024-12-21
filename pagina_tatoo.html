@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Frase Estilizada</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Página Tatoo - Eternidade</title>
 
-    <!-- Pré-conexão para otimizar a importação da fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Importando a fonte Dancing Script pelo Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" 
+    rel="stylesheet"
+  >
 
-    <!-- Fonte manuscrita elegante -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5; /* Cor de fundo suave */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Ocupa toda a tela */
+    /* Fundo estrelado */
+    body {
+      background: url('https://i.ibb.co/VDH6cst/bg-stars.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      /* Cor de fallback, se a imagem não carregar */
+      background-color: #0B0F2F; 
+      font-family: 'Dancing Script', cursive; /* Usa a fonte importada */
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Container para a frase */
+    .container-frase {
+      background-color: rgba(255, 255, 255, 0.1); /* Leve transparência */
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: 30px 40px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+      max-width: 90%;
+    }
+
+    /* Estilização da frase principal */
+    .container-frase h1 {
+      color: #FFFFFF; 
+      font-size: 56px; /* Ajuste conforme desejar */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 480px) {
+      .container-frase h1 {
+        font-size: 40px;
       }
-      .frase-estilizada {
-        font-family: "Great Vibes", cursive; /* Fonte manuscrita de estilo refinado */
-        font-size: 48px; /* Tamanho grande para dar destaque */
-        color: #4b2e83; /* Tom arroxeado */
-        text-align: center;
-        padding: 20px;
-        background-color: #ffffff; /* Fundo branco */
-        border: 2px solid #4b2e83; /* Linha elegante */
-        border-radius: 10px; /* Cantos arredondados */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="frase-estilizada">O que fazemos agora ecoa na eternidade</div>
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <div class="container-frase">
+    <h1>O que fazemos agora ecoa na eternidade</h1>
+  </div>
+</body>
 </html>
