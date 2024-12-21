@@ -26,9 +26,10 @@
       font-family: 'Dancing Script', cursive; /* Fonte personalizada */
       height: 100vh; /* Altura total da tela */
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* Alinha o conteúdo ao topo */
       align-items: center;
-      padding: 20px; /* Espaçamento para evitar cortes em telas pequenas */
+      flex-direction: column; /* Empilha elementos verticalmente */
+      padding-top: 10%; /* Define o espaçamento do topo */
     }
 
     /* Estilização do contêiner da frase */
@@ -36,31 +37,30 @@
       background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
       border: 2px solid rgba(255, 255, 255, 0.5); /* Borda clara */
       border-radius: 12px; /* Cantos arredondados */
-      padding: 20px 30px; /* Espaçamento interno ajustado */
+      padding: 20px 40px; /* Espaçamento interno ajustado */
       text-align: center;
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra ao redor */
-      max-width: 100%; /* Ajusta para caber na tela de smartphones */
+      max-width: 90%; /* Ajusta a largura para telas pequenas */
     }
 
     /* Estilização da frase principal */
     .container-frase h1 {
       color: #FFFFFF; /* Cor branca para contraste */
-      font-size: 64px; /* Tamanho maior da fonte */
-      line-height: 1.3; /* Espaçamento entre linhas */
+      font-size: 72px; /* Tamanho maior da fonte */
+      line-height: 1.4; /* Espaçamento entre linhas */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
     }
 
-    /* Responsividade para smartphones */
+    /* Responsividade para tablets e smartphones */
     @media (max-width: 768px) {
       .container-frase h1 {
-        font-size: 48px; /* Reduz fonte para caber em telas menores */
+        font-size: 56px; /* Reduz tamanho da fonte para telas médias */
       }
     }
 
     @media (max-width: 480px) {
       .container-frase h1 {
-        font-size: 36px; /* Fonte ainda menor para smartphones pequenos */
-        padding: 10px; /* Reduz o padding interno */
+        font-size: 40px; /* Fonte ainda menor para smartphones pequenos */
       }
     }
   </style>
