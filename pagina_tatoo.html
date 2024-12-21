@@ -20,42 +20,39 @@
       box-sizing: border-box;
     }
 
-    /* Fundo estrelado */
+    /* Configuração do corpo da página */
     body {
-      background: url('https://i.ibb.co/VDH6cst/bg-stars.jpg') no-repeat center center fixed;
-      background-size: cover;
-      background-attachment: fixed;
-      /* Cor de fallback, se a imagem não carregar */
-      background-color: #0B0F2F; 
-      font-family: 'Dancing Script', cursive; /* Usa a fonte importada */
-      height: 100vh; 
+      background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+      background-size: cover; /* Faz o fundo ocupar a tela inteira */
+      font-family: 'Dancing Script', cursive; /* Fonte personalizada */
+      height: 100vh; /* Altura total da tela */
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* Container para a frase */
+    /* Estilização do contêiner da frase */
     .container-frase {
-      background-color: rgba(255, 255, 255, 0.1); /* Leve transparência */
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      border-radius: 12px;
-      padding: 30px 40px;
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para destaque */
+      border: 2px solid rgba(255, 255, 255, 0.5); /* Borda clara */
+      border-radius: 12px; /* Cantos arredondados */
+      padding: 30px 40px; /* Espaçamento interno */
       text-align: center;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-      max-width: 90%;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra ao redor */
+      max-width: 80%;
     }
 
     /* Estilização da frase principal */
     .container-frase h1 {
-      color: #FFFFFF; 
-      font-size: 56px; /* Ajuste conforme desejar */
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      color: #FFFFFF; /* Cor branca para contraste */
+      font-size: 56px; /* Tamanho da fonte */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
     }
 
     /* Responsividade para telas menores */
     @media (max-width: 480px) {
       .container-frase h1 {
-        font-size: 40px;
+        font-size: 36px; /* Reduz tamanho da fonte em telas pequenas */
       }
     }
   </style>
