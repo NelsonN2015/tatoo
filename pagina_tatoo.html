@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Página Tatoo - Eternidade!</title>
+  <title>Página Tatoo - Eternidade</title>
 
   <!-- Importando a fonte Dancing Script pelo Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 
     /* Configuração do corpo da página */
     body {
-      background: url('https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxzdGFyfGVufDB8fHx8MTY1NzMwNzYxMQ&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1477847616634-04069c3f5f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxzdGFyfGVufDB8fHx8MTY1NzMwNzYxMQ&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
       background-size: cover; /* Faz o fundo ocupar a tela inteira */
       font-family: 'Dancing Script', cursive; /* Fonte personalizada */
       height: 100vh; /* Altura total da tela */
@@ -45,4 +45,21 @@
     /* Estilização da frase principal */
     .container-frase h1 {
       color: #FFFFFF; /* Cor branca para contraste */
-      font-size: 56px; /* Tam
+      font-size: 56px; /* Tamanho da fonte */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 480px) {
+      .container-frase h1 {
+        font-size: 36px; /* Reduz tamanho da fonte em telas pequenas */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-frase">
+    <h1>O que fazemos agora ecoa na eternidade</h1>
+  </div>
+</body>
+</html>
